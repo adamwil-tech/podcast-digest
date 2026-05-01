@@ -70,8 +70,8 @@ def send_email(html_body):
         subject="☕ Your Morning Podcast Digest",
         html_content=html_body
     )
-   api_key = os.environ.get("SENDGRID_API_KEY", "").strip()
-sg = SendGridAPIClient(api_key)
+    api_key = os.environ.get("SENDGRID_API_KEY", "").strip()
+    sg = SendGridAPIClient(api_key)
     response = sg.send(message)
     print(f"Email sent! Status: {response.status_code}")
 
